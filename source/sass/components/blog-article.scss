@@ -1,0 +1,58 @@
+.blog-article {
+  display: flex;
+  align-items: center;
+
+  max-width: 570px;
+  width: 100%;
+
+  img {
+    display: flex;
+
+    width: 100%;
+  }
+}
+
+.blog-article--large {
+  position: relative;
+
+  grid-row: 1 / 2 span;
+  grid-column: 2;
+
+  .blog-article__content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.blog-article__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 285px;
+  height: 300px;
+
+  background-color: #f0eae4;
+
+  text-align: center;
+
+  time {
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $font-color-grey;
+  }
+
+  h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 33px;
+  }
+
+  a {
+    @include link;
+  }
+}

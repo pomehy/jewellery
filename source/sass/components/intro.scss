@@ -1,0 +1,38 @@
+.intro {
+  background-image: url('../../img/intro-bg-desktop@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+
+    color: $basic-white;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 38px;
+    line-height: 49px;
+    text-transform: lowercase;
+  }
+}
+
+.intro__wrapper {
+  @include container;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 463px;
+}

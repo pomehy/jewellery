@@ -1,0 +1,23 @@
+.gallery__list {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content;
+  column-gap: 27px;
+  row-gap: 34px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.gallery__item {
+  img {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.gallery__item--large {
+  grid-column: 2 / 1 span;
+  grid-row: 1 / 2 span;
+}

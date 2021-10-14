@@ -1,0 +1,28 @@
+.blog__wrapper {
+  @include container;
+}
+
+.blog__header {
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  h2 {
+    @include section-title;
+  }
+
+  a {
+    @include link;
+  }
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

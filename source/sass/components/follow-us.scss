@@ -1,0 +1,17 @@
+.follow-us__wrapper {
+  @include container;
+}
+
+.follow-us__header {
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  h2 {
+    @include section-title;
+  }
+
+  a {
+    @include link;
+  }
+}

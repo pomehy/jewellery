@@ -1,0 +1,37 @@
+.goods__item {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: $font-color-dark;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+      transform: translateY(-5px);
+    }
+  }
+
+  img {
+    display: flex;
+    max-width: 270px;
+    height: 284px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

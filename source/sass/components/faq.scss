@@ -1,0 +1,41 @@
+.faq__wrapper {
+  @include container;
+}
+
+.faq__header {
+  h2 {
+    @include section-title;
+
+    text-transform: none;
+  }
+}
+
+.faq__list {
+  margin: 0;
+}
+
+.faq__item {
+  dd {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: $font-color-dark;
+  }
+}
+
+.faq__question {
+  button {
+    padding: 0;
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+}
