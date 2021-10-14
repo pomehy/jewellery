@@ -1,35 +1,141 @@
 .subscribe__text {
+  margin-bottom: 30px;
+
   h3 {
     @include section-title;
 
+    margin-bottom: 7px;
     text-align: start;
+    text-transform: none;
+    letter-spacing: .023em;
   }
 
   p {
+    margin-top: 0;
+    margin-bottom: 0;
     color: $font-color-grey;
   }
 }
 
 .subscribe__form {
+  form {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $basic-white;
+    }
+
+    &:hover,
+    &:focus-within {
+      &::before {
+        height: 2px;
+      }
+    }
+  }
+
   input {
+    padding-top: 9px;
+    padding-right: 0;
+    padding-bottom: 9px;
+    padding-left: 0;
+
+    width: 100%;
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $basic-white;
+
     background-color: transparent;
     border: none;
+
+    &::placeholder {
+      color: $font-color-grey;
+    }
+
+    &:hover,
+    &:focus {
+      &::placeholder {
+        color: $basic-white;
+      }
+    }
   }
 
   button {
     position: relative;
+    display: flex;
+    align-items: center;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    max-width: 108px;
+    width: 100%;
 
     font-family: 'Poppins', Arial, sans-serif;
     color: $basic-white;
     font-size: 16px;
+
+    text-transform: capitalize;
 
     background-color: transparent;
     border: none;
 
     cursor: pointer;
 
+    box-sizing: border-box;
+
     &::before {
       content: '';
+      position: absolute;
+      right: 0;
+
+      width: 29px;
+      height: 11px;
+
+      background-image: url("../../img/decor/signup-arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
     }
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+      opacity: 0.8;
+
+      &::before {
+        animation-name: vanish;
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes vanish {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
   }
 }

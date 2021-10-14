@@ -2,13 +2,15 @@
   background-image: url('../../img/intro-bg-desktop@1x.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   h2 {
+    margin-top: 42px;
+
     font-family: "Cormorant Garamond", Georgia, serif;
     font-weight: 700;
     font-size: 45px;
-    line-height: 58px;
+    line-height: 48px;
     letter-spacing: 0.03em;
 
     color: $basic-white;
@@ -24,6 +26,7 @@
     font-size: 38px;
     line-height: 49px;
     text-transform: lowercase;
+    letter-spacing: 0;
   }
 }
 

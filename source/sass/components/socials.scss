@@ -4,7 +4,14 @@
 
   list-style: none;
 
+  li {
+    margin-bottom: 17px;
+  }
+
   a {
+    display: flex;
+    align-items: center;
+
     color: $basic-white;
     text-decoration: none;
 
@@ -17,5 +24,10 @@
     &:active {
       opacity: 0.6;
     }
+  }
+
+  svg {
+    width: 15px;
+    padding-right: 16px;
   }
 }

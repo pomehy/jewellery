@@ -1,5 +1,36 @@
 .search-form__field {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../../img/decor/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.2s ease-in;
+  }
+
+  &:hover,
+  &:focus-within {
+    &::before {
+      transform: scale(1.25);
+    }
+  }
+
   input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -7,5 +38,6 @@
     color: $font-color-grey;
 
     border: none;
+    box-sizing: border-box;
   }
 }
