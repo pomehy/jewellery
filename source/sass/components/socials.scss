@@ -28,6 +28,30 @@
 
   svg {
     width: 15px;
-    padding-right: 16px;
+    padding-right: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+
+    li {
+      margin-bottom: 0;
+      margin-right: 18px;
+
+      &:first-child {
+        svg {
+          width: 13px;
+        }
+      }
+    }
+
+    span {
+      display: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 21px;
+    }
   }
 }
