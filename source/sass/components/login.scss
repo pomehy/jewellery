@@ -1,0 +1,19 @@
+.login {
+  @media (max-width: $tablet-width) {
+    a {
+      font-size: 18px;
+      line-height: 23px;
+
+      color: $basic-white;
+
+      &:hover,
+      &:focus {
+        color: transparentize($basic-white, 0.4)
+      }
+
+      &:active {
+        color: transparentize($basic-white, 0.7)
+      }
+    }
+  }
+}

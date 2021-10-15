@@ -1,3 +1,9 @@
+.new-products__wrapper {
+  @include container;
+
+  display: none;
+}
+
 .new-products__header {
   text-align: center;
   margin-bottom: 20px;
@@ -10,10 +16,6 @@
   a {
     @include link;
   }
-}
-
-.new-products__wrapper {
-  @include container;
 }
 
 .new-products__list {

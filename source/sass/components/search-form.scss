@@ -1,3 +1,9 @@
+.search-form {
+  form {
+    width: 100%;
+  }
+}
+
 .search-form__field {
   position: relative;
 
@@ -39,5 +45,34 @@
 
     border: none;
     box-sizing: border-box;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+
+    &::before {
+      left: 13px;
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../../img/decor/search-icon-light.svg");
+    }
+
+    input {
+      padding-right: 15px;
+      padding-left: 40px;
+
+      width: 100%;
+
+      font-size: 18px;
+      color: $basic-white;
+
+      background-color: transparentize($basic-white, 0.85);
+      border-radius: 21px;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
   }
 }

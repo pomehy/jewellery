@@ -1,5 +1,6 @@
 .navigation__main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   margin-top: 0;
@@ -44,6 +45,36 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+
+    margin-bottom: 29px;
+    margin-left: 0;
+
+    li {
+      display: flex;
+    }
+
+    a {
+      padding-bottom: 11px;
+      padding-left: 0;
+      padding-right: 55px;
+
+      font-size: 24px;
+      line-height: 36px;
+
+      color: $basic-white;
+
+      &:hover,
+      &:focus {
+        color: transparentize($basic-white, 0.4)
+      }
+      &:active {
+        color: transparentize($basic-white, 0.7)
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 19px;
   }
 }
 
@@ -55,13 +86,43 @@
 
   list-style: none;
 
+  li {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   a {
     display: flex;
-    padding: 5px 10px;
+    padding-right: 55px;
+
+    font-size: 18px;
+    line-height: 23px;
+
+    color: transparentize($basic-white, 0.3);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: transparentize($basic-white, 0.1)
+    }
+
+    &:active {
+      color: transparentize($basic-white, 0.7)
+    }
   }
 
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 37px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 27px;
   }
 }
