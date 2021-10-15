@@ -3,12 +3,13 @@
 }
 
 .blog__header {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 
   text-align: center;
 
   h2 {
     @include section-title;
+    margin-bottom: 11px;
   }
 
   a {
@@ -18,7 +19,7 @@
 
 .blog__list {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 
   margin: 0;
