@@ -1,3 +1,33 @@
+.cart__link {
+  position: relative;
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      width: 45px;
+      height: 45px;
+    }
+
+    p {
+      display: none;
+    }
+  }
+}
+
 .cart__icon {
   display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+  }
 }
