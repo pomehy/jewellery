@@ -1,41 +1,153 @@
 .faq__wrapper {
   @include container;
+
+  padding-right: 115px;
+  padding-left: 115px;
 }
 
 .faq__header {
+  margin-bottom: 48px;
+
   h2 {
     @include section-title;
 
     text-transform: none;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .faq__list {
   margin: 0;
+
+  border: 1px solid $basic-brown;
+
+  box-sizing: border-box;
 }
 
 .faq__item {
-  dd {
-    margin: 0;
+  border-bottom: 1px solid $basic-brown;
 
-    font-weight: 400;
-    font-size: 16px;
-    color: $font-color-dark;
+  &:last-child {
+    border-bottom: none;
   }
-}
 
-.faq__question {
   button {
-    padding: 0;
+    position: relative;
+
+    display: flex;
+
+    padding-top: 43px;
+    padding-right: 56px;
+
+    padding-bottom: 44px;
+    padding-left: 43px;
+
+    width: 100%;
 
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 23px;
+    letter-spacing: 0.005em;
+    text-align: start;
 
     background-color: transparent;
     border: none;
 
     cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      right: 49px;
+
+      width: 15px;
+      height: 10px;
+
+      background-image: url("../../img/decor/toggle-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  dd {
+    display: none;
+
+    margin: 0;
+    padding-left: 49px;
+
+    max-width: 53%;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $font-color-dark;
+  }
+
+  @media (max-width: $mobile-width) {
+    button {
+      padding-top: 18px;
+      padding-bottom: 19px;
+      padding-left: 23px;
+
+      font-size: 16px;
+      line-height: 22px;
+
+      &::before {
+        top: 23px;
+        right: 23px;
+
+        width: 22px;
+        height: 12px;
+      }
+    }
+
+    dd {
+      padding-left: 24px;
+
+      max-width: 72%;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.faq__item--opened {
+  padding-bottom: 41px;
+
+  button {
+    padding-bottom: 8px;
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  dd {
+    display: flex;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 17px;
+
+    button {
+      padding-bottom: 14px;
+    }
   }
 }
