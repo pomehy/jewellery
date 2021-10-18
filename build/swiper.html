@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Demo styles -->
+  <!-- <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style> -->
+  <style>
+    .swiper-pagination-bullet {
+      /* opacity: 0; */
+      background-color: transparent;
+      font-family: 'Poppins';
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 11</div>
+      <div class="swiper-slide">Slide 12</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div> -->
+  <section class="page-main__new-products new-products">
+    <div class="new-products__wrapper swiper mySwiper">
+      <div class="new-products__header">
+        <h2>New in</h2>
+        <a href="#">Shop now</a>
+      </div>
+      <div class="swiper-wrapper new-products__list goods">
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Necklace with amethyst</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">145</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/layered-choker-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Layered сhoker</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">115</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/gold-layered-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Gold chain</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">215</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/galaxy-earrings-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Galaxy earrings</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">95</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Necklace with amethyst</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">145</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/layered-choker-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Layered сhoker</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">115</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/gold-layered-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Gold chain</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">215</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/galaxy-earrings-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Galaxy earrings</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">95</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Necklace with amethyst</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">145</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/layered-choker-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Layered сhoker</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">115</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/gold-layered-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Gold chain</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">215</span></p>
+          </a>
+        </article>
+        <article class="swiper-slide goods__item goods__item--new">
+          <a href="#">
+            <picture>
+              <img src="img/catalog/galaxy-earrings-desktop@1x.jpg" alt="Product image" width="270" height="284">
+            </picture>
+            <h3>Galaxy earrings</h3>
+            <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">95</span></p>
+          </a>
+        </article>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const mobileScreen = window.matchMedia('(max-width: 767px)');
+
+
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      // loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          allowTouchMove: false,
+        },
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          allowTouchMove: true,
+        }
+      },
+    });
+  </script>
+</body>
+
+</html>
