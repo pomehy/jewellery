@@ -1,7 +1,7 @@
 .follow-us__wrapper {
   @include container;
 
-  display: none;
+  // display: none;
 }
 
 .follow-us__header {
@@ -12,10 +12,18 @@
   h2 {
     @include section-title;
 
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   a {
     @include link;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 46px;
+
+    h2 {
+      margin-bottom: 12px;
+    }
   }
 }
