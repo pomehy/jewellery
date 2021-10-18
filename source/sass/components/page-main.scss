@@ -1,0 +1,31 @@
+.page-main__catalog {
+  padding-top: 80px;
+  padding-bottom: 35px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+}
+
+.page-main__follow-us {
+  padding-bottom: 129px;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 72px;
+  }
+}
+
+.page-main__faq {
+  padding-top: 120px;
+  padding-bottom: 109px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

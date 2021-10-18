@@ -28,7 +28,7 @@
 
   svg {
     width: 15px;
-    padding-right: 12px;
+    padding-right: 16px;
   }
 
   @media (max-width: $mobile-width) {
@@ -36,7 +36,7 @@
 
     li {
       margin-bottom: 0;
-      margin-right: 18px;
+      margin-right: 14px;
 
       &:first-child {
         svg {
