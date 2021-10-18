@@ -1,14 +1,18 @@
 .follow-us__wrapper {
   @include container;
+
+  display: none;
 }
 
 .follow-us__header {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 
   text-align: center;
 
   h2 {
     @include section-title;
+
+    margin-bottom: 22px;
   }
 
   a {

@@ -15,6 +15,10 @@
   a {
     @include link;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 49px;
+  }
 }
 
 .blog__list {
@@ -26,4 +30,36 @@
   padding: 0;
 
   list-style: none;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    gap: 40px;
+  }
+}
+
+.blog__item {
+  display: flex;
+  align-items: center;
+
+  &:nth-child(2n) {
+    .blog-article__content {
+      order: -1;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &:nth-child(2n) {
+      .blog-article__content {
+        order: 0;
+      }
+    }
+  }
 }
