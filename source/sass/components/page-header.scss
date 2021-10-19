@@ -13,15 +13,15 @@
 }
 
 .page-header--opened {
-  position: absolute;
-  z-index: 10;
-
-  width: 100%;
-  min-height: 100vh;
-
-  background-color: $basic-brown;
-
   @media (max-width: $tablet-width) {
+    position: absolute;
+    z-index: 10;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: $basic-brown;
+
     .page-header__toggle {
       background-image: url("../../img/decor/mobile-toggle-light.svg");
     }
@@ -55,6 +55,15 @@
     .page-header__logo {
       top: -15px;
     }
+  }
+}
+
+.page-header--nojs {
+  @media (max-width: $tablet-width) {
+    position: static;
+    min-height: auto;
+
+    background-color: $basic-brown;
   }
 }
 

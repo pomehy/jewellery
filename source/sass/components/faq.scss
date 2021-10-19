@@ -99,6 +99,25 @@
     color: $font-color-dark;
   }
 
+  @media (max-width: $tablet-width) {
+    button {
+      padding-left: 49px;
+
+      letter-spacing: 0;
+
+      &::before {
+        top: 48px;
+        right: 49px;
+        width: 23px;
+        height: 14px;
+      }
+    }
+
+    dd {
+      max-width: 80%;
+    }
+  }
+
   @media (max-width: $mobile-width) {
     button {
       padding-top: 18px;
@@ -141,6 +160,14 @@
 
   dd {
     display: flex;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 44px;
+
+    button {
+      padding-bottom: 26px;
+    }
   }
 
   @media (max-width: $mobile-width) {

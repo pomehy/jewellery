@@ -15,6 +15,10 @@
 .page-main__follow-us {
   padding-bottom: 129px;
 
+  @media (max-width: $tablet-width) {
+    padding-bottom: 79px;
+  }
+
   @media (max-width: $mobile-width) {
     padding-bottom: 72px;
   }
@@ -23,6 +27,11 @@
 .page-main__faq {
   padding-top: 120px;
   padding-bottom: 109px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 74px;
+  }
 
   @media (max-width: $mobile-width) {
     padding-top: 60px;

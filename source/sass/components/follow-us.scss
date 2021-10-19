@@ -19,6 +19,12 @@
     @include link;
   }
 
+  @media (max-width: $tablet-width) {
+    h2 {
+      margin-bottom: 12px;
+    }
+  }
+
   @media (max-width: $mobile-width) {
     margin-bottom: 46px;
 

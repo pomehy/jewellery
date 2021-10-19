@@ -1,3 +1,18 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: auto;
+
+  max-width: 870px;
+  width: 100%;
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+  }
+}
+
 .pagination__list {
   display: flex;
 

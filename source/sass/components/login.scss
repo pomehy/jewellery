@@ -1,6 +1,19 @@
 .login__image-wrapper {
   img {
     display: flex;
+    width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    img {
+      height: 138px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    img {
+      height: 84px;
+    }
   }
 }
 
@@ -68,6 +81,23 @@
       opacity: 0.4;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    padding-right: 51px;
+    padding-left: 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 31px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+
+    h2 {
+      margin-bottom: 9px;
+      font-size: 24px;
+    }
+  }
 }
 
 .login__form {
@@ -101,7 +131,7 @@
 
     &:hover,
     &:focus {
-      font-weight: 700;
+      color: $font-color-dark;
 
       outline: none;
       box-shadow: inset 1px -4px 0 -1px $basic-brown;
@@ -114,6 +144,22 @@
 
   button[type=submit] {
     margin-top: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    input {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    input {
+      margin-bottom: 19px;
+    }
+
+    button[type=submit] {
+      margin-top: 35px;
+    }
   }
 }
 
@@ -134,4 +180,17 @@
   border: none;
 
   box-sizing: border-box;
+
+
+  @media (max-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+
+    background-size: 35%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 45px;
+    height: 44px;
+  }
 }

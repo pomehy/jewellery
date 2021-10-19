@@ -30,18 +30,31 @@
     &::before {
       transform: scale(1.25);
     }
+
+    input {
+      outline: none;
+      box-shadow: inset 1px -3px 0 -1px $basic-brown;
+
+      &::placeholder {
+        color: $font-color-dark;
+      }
+    }
   }
 
   input {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
+    padding-right: 10px;
+
+    max-width: 350px;
+    width: 100%;
 
     font-family: 'Poppins', Arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: $font-color-grey;
+    color: $font-color-dark;
 
     border: none;
     box-sizing: border-box;
@@ -72,6 +85,15 @@
 
       &::placeholder {
         color: transparent;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      input {
+        &::placeholder {
+          color: $basic-white;
+        }
       }
     }
   }
