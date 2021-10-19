@@ -83,6 +83,37 @@
   const loginButton = document.querySelector('.page-header__login a');
   const loginUserEmail = document.querySelector('#login-user-email');
 
+  const filter = document.querySelector('.filter');
+  const filterToggle = document.querySelector('.filter__toggle');
+
+  if (filterToggle) {
+    filterToggle.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      filter.classList.add('filter--opened');
+      pageBody.classList.add('page-body--no-scroll');
+    });
+  }
+
+  if (filter) {
+    window.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
+        if (filter.classList.contains('filter--opened')) {
+          filter.classList.remove('filter--opened');
+        }
+        pageBody.classList.remove('page-body--no-scroll');
+      }
+    });
+  }
+
+  if (filter) {
+    filter.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('filter--opened') || evt.target.classList.contains('filter__form-wrapper') || evt.target.classList.contains('filter__close')) {
+        filter.classList.remove('filter--opened');
+        pageBody.classList.remove('page-body--no-scroll');
+      }
+    });
+  }
+
   if (loginButton) {
     loginButton.addEventListener('click', (evt) => {
       evt.preventDefault();
