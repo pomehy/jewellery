@@ -95,87 +95,90 @@
       <div class="catalog__wrapper">
         <section class="catalog__filter filter">
           <h2 class="visually-hidden">Catalog filter</h2>
-          <button class="button filter__toggle" type="button">Filter</button>
-          <form action="#">
-            <div class="filter__fieldset-wrapper">
-              <fieldset class="filter__fieldset filter__fieldset--opened">
-                <legend>
-                  <button type="button">Product</button>
-                </legend>
-                <ul>
-                  <li>
-                    <input class="visually-hidden" id="filter-necklaces" type="checkbox" checked>
-                    <label for="filter-necklaces">Necklaces</label>
-                  </li>
-                  <li>
-                    <input class="visually-hidden" id="filter-chokers" type="checkbox" checked>
-                    <label for="filter-chokers">Chokers</label>
-                  </li>
-                  <li>
-                    <input class="visually-hidden" id="filter-rings" type="checkbox">
-                    <label for="filter-rings">Rings</label>
-                  </li>
-                  <li>
-                    <input class="visually-hidden" id="filter-earrings" type="checkbox" checked>
-                    <label for="filter-earrings">Earrings</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter__fieldset">
-                <legend>
-                  <button type="button">Material</button>
-                </legend>
-                <ul>
-                  <li>
-                    <input class="visually-hidden" id="filter-gold" type="checkbox" checked>
-                    <label for="filter-gold">Gold</label>
-                  </li>
-                  <li>
-                    <input class="visually-hidden" id="filter-silver" type="checkbox" checked>
-                    <label for="filter-silver">Silver</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter__fieldset">
-                <legend>
-                  <button type="button">Collection</button>
-                </legend>
-                <ul>
-                  <li>
-                    <input class="visually-hidden" id="filter-pink-flamingo" type="checkbox" checked>
-                    <label for="filter-pink-flamingo">Pink flamingo</label>
-                  </li>
-                  <li>
-                    <input class="visually-hidden" id="filter-dreams" type="checkbox" checked>
-                    <label for="filter-dreams">Dreams</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter__fieldset filter__fieldset--opened">
-                <legend>
-                  <button type="button">Price</button>
-                </legend>
-                <div class="filter__range range">
-                  <div class="range__scale">
-                    <div class="range__bar">
-                      <div class="range__toggle range__toggle--min">
-                        <label>
-                          <input type="text" aria-label="min value" maxlength="6" value="55">
-                        </label>
-                      </div>
-                      <div class="range__toggle range__toggle--max">
-                        <label>
-                          <input type="text" aria-label="max value" maxlength="6" value="155">
-                        </label>
+          <a class="button filter__toggle" href="filter.html">Filter</a>
+          <div class="filter__form-wrapper">
+            <form action="#">
+              <div class="filter__fieldset-wrapper">
+                <fieldset class="filter__fieldset filter__fieldset--nojs">
+                  <legend>
+                    <button type="button">Product</button>
+                  </legend>
+                  <ul>
+                    <li>
+                      <input class="visually-hidden" id="filter-necklaces" type="checkbox" checked>
+                      <label for="filter-necklaces">Necklaces</label>
+                    </li>
+                    <li>
+                      <input class="visually-hidden" id="filter-chokers" type="checkbox" checked>
+                      <label for="filter-chokers">Chokers</label>
+                    </li>
+                    <li>
+                      <input class="visually-hidden" id="filter-rings" type="checkbox">
+                      <label for="filter-rings">Rings</label>
+                    </li>
+                    <li>
+                      <input class="visually-hidden" id="filter-earrings" type="checkbox" checked>
+                      <label for="filter-earrings">Earrings</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter__fieldset filter__fieldset--nojs">
+                  <legend>
+                    <button type="button">Material</button>
+                  </legend>
+                  <ul>
+                    <li>
+                      <input class="visually-hidden" id="filter-gold" type="checkbox" checked>
+                      <label for="filter-gold">Gold</label>
+                    </li>
+                    <li>
+                      <input class="visually-hidden" id="filter-silver" type="checkbox" checked>
+                      <label for="filter-silver">Silver</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter__fieldset filter__fieldset--nojs">
+                  <legend>
+                    <button type="button">Collection</button>
+                  </legend>
+                  <ul>
+                    <li>
+                      <input class="visually-hidden" id="filter-pink-flamingo" type="checkbox" checked>
+                      <label for="filter-pink-flamingo">Pink flamingo</label>
+                    </li>
+                    <li>
+                      <input class="visually-hidden" id="filter-dreams" type="checkbox" checked>
+                      <label for="filter-dreams">Dreams</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter__fieldset filter__fieldset--nojs">
+                  <legend>
+                    <button type="button">Price</button>
+                  </legend>
+                  <div class="filter__range range">
+                    <div class="range__scale">
+                      <div class="range__bar">
+                        <div class="range__toggle range__toggle--min">
+                          <label>
+                            <input type="text" aria-label="min value" maxlength="6" value="55">
+                          </label>
+                        </div>
+                        <div class="range__toggle range__toggle--max">
+                          <label>
+                            <input type="text" aria-label="max value" maxlength="6" value="155">
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </fieldset>
-            </div>
-            <button class="filter__button button" type="submit">Apply</button>
-            <button class="filter__button button button--stroke" type="reset">Clear all</button>
-          </form>
+                </fieldset>
+              </div>
+              <button class="filter__button button" type="submit">Apply</button>
+              <button class="filter__button button button--stroke" type="reset">Clear all</button>
+              <button class="filter__close" type="button"></button>
+            </form>
+          </div>
         </section>
         <section class="catalog__goods goods">
           <h2 class="visually-hidden">Product catalog</h2>
@@ -288,8 +291,9 @@
             </a>
           </article>
         </section>
-        <div class="catalog__pagination pagination">
-          <a class="pagination__button pagination__prev" href="#">Previous</a>
+        <div class="catalog__pagination">
+          <div class="pagination">
+            <a class="pagination__button pagination__prev" href="#">Previous</a>
           <ol class="pagination__list">
             <li>
               <a class="pagination__page pagination__page--current" href="#"></a>
@@ -308,6 +312,7 @@
             </li>
           </ol>
           <a class="pagination__button pagitation__next" href="#">Next</a>
+          </div>
         </div>
       </div>
     </div>
