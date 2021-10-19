@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="page-header__wrapper">
       <button class="page-header__toggle"><span class="visually-hidden">Open the mobile menu</span></button>
       <div class="page-header__search-form search-form">
@@ -33,8 +33,8 @@
           </svg>
         </a>
       </div>
-      <div class="page-header__login page-header__user-item login">
-        <a class="login__link" href="#">Login</a>
+      <div class="page-header__login page-header__user-item">
+        <a href="#">Login</a>
       </div>
       <div class="page-header__cart page-header__user-item user-menu">
         <ul class="user-menu__list">
@@ -51,19 +51,19 @@
       <nav class="page-header__navigation navigation">
         <ul class="navigation__main">
           <li>
-            <a href="#">What's new</a>
+            <a href="catalog.html">What's new</a>
           </li>
           <li>
-            <a href="#">Chokers</a>
+            <a href="catalog.html">Chokers</a>
           </li>
           <li>
-            <a href="#">Necklaces</a>
+            <a href="catalog.html">Necklaces</a>
           </li>
           <li>
-            <a href="#">Rings</a>
+            <a href="catalog.html">Rings</a>
           </li>
           <li>
-            <a href="#">Earrings</a>
+            <a href="catalog.html">Earrings</a>
           </li>
         </ul>
         <ul class="navigation__second">
@@ -192,7 +192,7 @@
             <dt>
               <button type="button">What materials are the&nbsp;jewellery made of?</button>
             </dt>
-            <dd>Our jewellerry is made of solid gold, silver or leather.&nbsp;&nbsp; Also, some jewellery contains precious and semiprecious stones and crystals.</dd>
+            <dd>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</dd>
           </div>
           <div class="faq__item">
             <dt> <button type="button">Which countries do&nbsp;you&nbsp;deliver to?</button></dt>
@@ -332,6 +332,30 @@
       </section>
     </div>
   </footer>
+  <section class="modal login">
+    <div class="modal__wrapper">
+      <div class="login__image-wrapper">
+        <picture>
+          <img src="img/login-bg-desktop@1x.jpg" alt="Beautiful jewelry" width="430" height="138">
+        </picture>
+      </div>
+      <div class="login__content">
+        <h2>Log In</h2>
+        <div class="login__form">
+          <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <label class="visually-hidden" for="login-user-email">E-mail user</label>
+            <input id="login-user-email" name="user-name" type="email" data-field="user-email" placeholder="Your E-mail" maxlength="30" required="">
+            <label class="visually-hidden" for="login-user-password">Password user</label>
+            <input id="login-user-password" name="user-password" type="password" data-field="user-password" placeholder="Password" minlength="10" required="">
+            <a class="login__forgot-password" href="#">Forgot your password?</a>
+            <button class="button" type="submit">Log in</button>
+            <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
+          </form>
+        </div>
+        <button class="modal__close login__close" type="button" aria-label="close popup"></button>
+      </div>
+    </div>
+  </section>
   <script src="js/main.js"></script>
 </body>
 </html>
