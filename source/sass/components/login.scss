@@ -1,19 +1,137 @@
-.login {
-  @media (max-width: $tablet-width) {
-    a {
-      font-size: 18px;
-      line-height: 23px;
+.login__image-wrapper {
+  img {
+    display: flex;
+  }
+}
 
-      color: $basic-white;
+.login__content {
+  padding-top: 50px;
+  padding-right: 45px;
+  padding-bottom: 40px;
+  padding-left: 45px;
 
-      &:hover,
-      &:focus {
-        color: transparentize($basic-white, 0.4)
-      }
+  background-color: #f0eae4;
 
-      &:active {
-        color: transparentize($basic-white, 0.7)
+  h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+
+    text-align: center;
+  }
+
+  .login__forgot-password {
+    margin-top: 5px;
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: $font-color-grey;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $font-color-dark;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $font-color-grey;
+
+    text-align: center;
+  }
+
+  a {
+    color: $font-color-dark;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}
+
+.login__form {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  input {
+    margin-bottom: 25px;
+    padding-top: 11px;
+    padding-bottom: 9px;
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 1px -2px 0 -1px $font-color-dark;
+
+    &::placeholder {
+      color: $font-color-grey;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      font-weight: 700;
+
+      outline: none;
+      box-shadow: inset 1px -4px 0 -1px $basic-brown;
+
+      &::placeholder {
+        color: $font-color-dark;
       }
     }
   }
+
+  button[type=submit] {
+    margin-top: 45px;
+  }
+}
+
+.login__close {
+  padding: 0;
+
+  top: 0;
+  right: 0;
+
+  width: 54px;
+  height: 55px;
+
+  background-image: url("../../img/decor/cross-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: transparent;
+  border: none;
+
+  box-sizing: border-box;
 }
