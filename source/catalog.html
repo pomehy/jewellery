@@ -173,8 +173,8 @@
                 </div>
               </fieldset>
             </div>
-            <button class="button" type="submit">Apply</button>
-            <button class="button button--stroke" type="reset">Clear all</button>
+            <button class="filter__button button" type="submit">Apply</button>
+            <button class="filter__button button button--stroke" type="reset">Clear all</button>
           </form>
         </section>
         <section class="catalog__goods goods">
@@ -380,6 +380,30 @@
       </section>
     </div>
   </footer>
+  <section class="modal login">
+    <div class="modal__wrapper">
+      <div class="login__image-wrapper">
+        <picture>
+          <img src="img/login-bg-desktop@1x.jpg" alt="Beautiful jewelry" width="430" height="138">
+        </picture>
+      </div>
+      <div class="login__content">
+        <h2>Log In</h2>
+        <div class="login__form">
+          <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <label class="visually-hidden" for="login-user-email">E-mail user</label>
+            <input id="login-user-email" name="user-name" type="email" data-field="user-email" placeholder="Your E-mail" maxlength="30" required>
+            <label class="visually-hidden" for="login-user-password">Password user</label>
+            <input id="login-user-password" name="user-password" type="password" data-field="user-password" placeholder="Password" minlength="10" required>
+            <a class="login__forgot-password" href="#">Forgot your password?</a>
+            <button class="button" type="submit">Log in</button>
+            <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
+          </form>
+        </div>
+        <button class="modal__close login__close" type="button" aria-label="close popup"></button>
+      </div>
+    </div>
+  </section>
   <script src="js/main.js"></script>
 </body>
 </html>
