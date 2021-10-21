@@ -48,9 +48,27 @@
 }
 
 .filter--nojs {
+  form {
+    width: 100%;
+  }
+
   .filter__form-wrapper {
+    position: static;
+
     display: flex;
-    padding-top: 50px;
+
+    height: auto;
+
+    background-color: transparent;
+    overflow: auto;
+  }
+
+  .filter__toggle {
+    display: none;
+  }
+
+  .filter__close {
+    display: none;
   }
 }
 

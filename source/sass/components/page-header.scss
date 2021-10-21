@@ -64,6 +64,34 @@
     min-height: auto;
 
     background-color: $basic-brown;
+
+    .page-header__toggle {
+      display: none;
+    }
+
+    .page-header__search-form {
+      display: flex;
+    }
+
+    .page-header__logo {
+      position: static;
+
+      svg {
+        fill: $basic-white;
+      }
+    }
+
+    .page-header__navigation {
+      display: flex;
+    }
+
+    .page-header__login {
+      display: flex;
+    }
+
+    .page-header__cart {
+      stroke: $basic-white;
+    }
   }
 }
 
