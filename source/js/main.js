@@ -21,6 +21,14 @@
 })();
 
 (function () {
+  const newProducts = document.querySelector('.new-products');
+
+  if (newProducts) {
+    newProducts.classList.remove('new-products--nojs');
+  }
+})();
+
+(function () {
   const faqItems = document.querySelectorAll('.faq__item');
   const faqToggles = document.querySelectorAll('.faq__item button');
 
@@ -103,6 +111,8 @@
         pageBody.classList.remove('page-body--no-scroll');
       }
     });
+
+    filter.classList.remove('filter--nojs');
   }
 
   if (filter) {
