@@ -15,11 +15,11 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="page-header__wrapper">
       <button class="page-header__toggle"><span class="visually-hidden">Open the mobile menu</span></button>
       <div class="page-header__search-form search-form">
-        <form action="#">
+        <form action="https://echo.htmlacademy.ru/" method="GET" enctype="multipart/form-data" autocomplete="off">
           <div class="search-form__field">
             <label class="visually-hidden" for="user-search">Site search</label>
             <input type="search" id="user-search" name="user-search" placeholder="Type here to search">
@@ -33,8 +33,8 @@
           </svg>
         </a>
       </div>
-      <div class="page-header__login page-header__user-item login">
-        <a class="login__link" href="#">Login</a>
+      <div class="page-header__login page-header__user-item">
+        <a href="login.html">Login</a>
       </div>
       <div class="page-header__cart page-header__user-item user-menu">
         <ul class="user-menu__list">
@@ -97,7 +97,7 @@
           <h2 class="visually-hidden">Catalog filter</h2>
           <a class="button filter__toggle" href="filter.html">Filter</a>
           <div class="filter__form-wrapper">
-            <form action="#">
+            <form action="https://echo.htmlacademy.ru" method="GET">
               <div class="filter__fieldset-wrapper">
                 <fieldset class="filter__fieldset filter__fieldset--nojs">
                   <legend>
@@ -105,19 +105,19 @@
                   </legend>
                   <ul>
                     <li>
-                      <input class="visually-hidden" id="filter-necklaces" type="checkbox" checked>
+                      <input class="visually-hidden" id="filter-necklaces" name="necklaces" type="checkbox" checked>
                       <label for="filter-necklaces">Necklaces</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" id="filter-chokers" type="checkbox" checked>
+                      <input class="visually-hidden" id="filter-chokers" name="chokers" type="checkbox" checked>
                       <label for="filter-chokers">Chokers</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" id="filter-rings" type="checkbox">
+                      <input class="visually-hidden" id="filter-rings" name="rings" type="checkbox">
                       <label for="filter-rings">Rings</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" id="filter-earrings" type="checkbox" checked>
+                      <input class="visually-hidden" id="filter-earrings" name="earrings"  type="checkbox" checked>
                       <label for="filter-earrings">Earrings</label>
                     </li>
                   </ul>
@@ -128,11 +128,11 @@
                   </legend>
                   <ul>
                     <li>
-                      <input class="visually-hidden" id="filter-gold" type="checkbox">
+                      <input class="visually-hidden" id="filter-gold" name="gold" type="checkbox">
                       <label for="filter-gold">Gold</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" id="filter-silver" type="checkbox" checked>
+                      <input class="visually-hidden" id="filter-silver" name="silver" type="checkbox" checked>
                       <label for="filter-silver">Silver</label>
                     </li>
                   </ul>
@@ -143,11 +143,11 @@
                   </legend>
                   <ul>
                     <li>
-                      <input class="visually-hidden" id="filter-pink-flamingo" type="checkbox" checked>
+                      <input class="visually-hidden" id="filter-pink-flamingo" name="pink-flamingo" type="checkbox" checked>
                       <label for="filter-pink-flamingo">Pink flamingo</label>
                     </li>
                     <li>
-                      <input class="visually-hidden" id="filter-dreams" type="checkbox">
+                      <input class="visually-hidden" id="filter-dreams" name="dreams" type="checkbox">
                       <label for="filter-dreams">Dreams</label>
                     </li>
                   </ul>
@@ -159,14 +159,14 @@
                   <div class="filter__range range">
                     <div class="range__scale">
                       <div class="range__bar">
-                        <div class="range__toggle range__toggle--min">
+                        <div class="range__toggle range__toggle--min" tabindex="0">
                           <label>
-                            <input type="text" aria-label="min value" maxlength="6" value="55">
+                            <input type="text" aria-label="min value" name="min-price" maxlength="6" value="55">
                           </label>
                         </div>
-                        <div class="range__toggle range__toggle--max">
+                        <div class="range__toggle range__toggle--max" tabindex="0">
                           <label>
-                            <input type="text" aria-label="max value" maxlength="6" value="155">
+                            <input type="text" aria-label="max value" name="max-price" maxlength="6" value="155">
                           </label>
                         </div>
                       </div>
@@ -293,7 +293,7 @@
         </section>
         <div class="catalog__pagination">
           <div class="pagination">
-            <a class="pagination__button pagination__prev" href="#">Previous</a>
+            <a class="pagination__button pagination__prev pagination__button--disabled" href="#">Previous</a>
           <ol class="pagination__list">
             <li>
               <a class="pagination__page pagination__page--current" href="#"></a>

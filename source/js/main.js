@@ -11,10 +11,8 @@
     headerToggle.addEventListener('click', function () {
       if (pageHeader.classList.contains('page-header--opened')) {
         pageHeader.classList.remove('page-header--opened');
-        // pageHeader.classList.add('page-header--opened');
       } else {
         pageHeader.classList.add('page-header--opened');
-        // pageHeader.classList.remove('page-header--opened');
       }
     });
   }
@@ -124,18 +122,6 @@
     });
   }
 
-  if (loginButton) {
-    loginButton.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      modalLogin.classList.add('modal--show');
-      pageBody.classList.add('page-body--no-scroll');
-
-      if (loginUserEmail) {
-        loginUserEmail.focus();
-      }
-    });
-  }
-
   if (modalLogin) {
     window.addEventListener('keydown', (evt) => {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
@@ -145,6 +131,18 @@
         pageBody.classList.remove('page-body--no-scroll');
       }
     });
+
+    if (loginButton) {
+      loginButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        modalLogin.classList.add('modal--show');
+        pageBody.classList.add('page-body--no-scroll');
+
+        if (loginUserEmail) {
+          loginUserEmail.focus();
+        }
+      });
+    }
   }
 
   if (modals) {

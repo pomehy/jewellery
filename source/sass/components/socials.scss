@@ -31,9 +31,14 @@
     padding-right: 16px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
 
+    max-width: 560px;
+  }
+
+  @media (max-width: $mobile-width) {
     li {
       margin-bottom: 0;
       margin-right: 14px;
@@ -43,6 +48,11 @@
           width: 13px;
         }
       }
+    }
+
+    a {
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
 
     span {

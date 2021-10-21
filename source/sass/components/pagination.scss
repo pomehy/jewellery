@@ -15,12 +15,15 @@
 
 .pagination__list {
   display: flex;
+  flex-wrap: wrap;
 
   margin-top: 0;
   margin-right: 37px;
   margin-bottom: 0;
 
   padding: 0;
+
+  max-width: 400px;
 
   list-style: none;
 
@@ -67,6 +70,12 @@
   }
 }
 
+.pagination__button--disabled {
+  opacity: 0.6;
+
+  pointer-events: none;
+}
+
 .pagination__page {
   position: relative;
   display: flex;
@@ -95,6 +104,8 @@
   }
 }
 
-.pagination__page--current {
+.pagination__page--current[href] {
   color: $font-color-dark;
+
+  pointer-events: none;
 }

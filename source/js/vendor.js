@@ -10057,6 +10057,10 @@
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   loopFillGroupWithBlank: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
   pagination: {
     el: ".new-products__pagination",
     clickable: true,

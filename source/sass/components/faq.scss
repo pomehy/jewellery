@@ -178,3 +178,14 @@
     }
   }
 }
+
+.faq__item--nojs {
+  button {
+    pointer-events: none;
+    cursor: auto;
+
+    &::before {
+      display: none;
+    }
+  }
+}
