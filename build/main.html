@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,10 @@
   <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" crossorigin="">
   <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" crossorigin="">
   <link rel="preload" href="fonts/cormorant-garamond-mediumitalic.woff2" as="font" crossorigin="">
-  <title>Jewellery Store</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <title>Jewellery Store</title>
 </head>
+
 <body class="page-body">
   <header class="page-header page-header--nojs">
     <div class="page-header__wrapper">
@@ -91,22 +93,26 @@
       </div>
     </section>
     <section class="page-main__new-products new-products">
-      <div class="new-products__wrapper">
+      <div class="new-products__wrapper swiper mySwiper">
         <div class="new-products__header">
           <h2>New in</h2>
           <a href="#">Shop now</a>
+          <div class="new-products__navigation">
+            <button class="new-products__prev" type="button" aria-label="Previous slide"></button>
+            <button class="new-products__next" type="button" aria-label="Next slide"></button>
+          </div>
         </div>
-        <div class="new-products__list goods">
-          <article class="goods__item goods__item--new">
+        <div class="swiper-wrapper new-products__list goods">
+          <article class="swiper-slide goods__item goods__item--new">
             <a href="#">
               <picture>
-                  <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+                <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
               </picture>
               <h3>Necklace with amethyst</h3>
               <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">145</span></p>
             </a>
           </article>
-          <article class="goods__item goods__item--new">
+          <article class="swiper-slide goods__item goods__item--new">
             <a href="#">
               <picture>
                 <img src="img/catalog/layered-choker-desktop@1x.jpg" alt="Product image" width="270" height="284">
@@ -115,16 +121,88 @@
               <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">115</span></p>
             </a>
           </article>
-          <article class="goods__item goods__item--new">
+          <article class="swiper-slide goods__item goods__item--new">
             <a href="#">
               <picture>
-                  <img src="img/catalog/gold-layered-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+                <img src="img/catalog/dainty-gold-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
               </picture>
               <h3>Gold chain</h3>
               <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">215</span></p>
             </a>
           </article>
-          <article class="goods__item goods__item--new">
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/galaxy-earrings-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">95</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Necklace with amethyst</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">145</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/layered-choker-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Layered сhoker</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">115</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/dainty-gold-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Gold chain</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">215</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/galaxy-earrings-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Galaxy earrings</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">95</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/purple-gemstone-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Necklace with amethyst</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">145</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/layered-choker-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Layered сhoker</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">115</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
+            <a href="#">
+              <picture>
+                <img src="img/catalog/dainty-gold-necklace-desktop@1x.jpg" alt="Product image" width="270" height="284">
+              </picture>
+              <h3>Gold chain</h3>
+              <p><span class="goods__currency">$&nbsp;</span><span class="goods__price">215</span></p>
+            </a>
+          </article>
+          <article class="swiper-slide goods__item goods__item--new">
             <a href="#">
               <picture>
                 <img src="img/catalog/galaxy-earrings-desktop@1x.jpg" alt="Product image" width="270" height="284">
@@ -134,6 +212,7 @@
             </a>
           </article>
         </div>
+        <div class="new-products__pagination"></div>
       </div>
     </section>
     <section class="page-main__blog blog">
@@ -192,11 +271,13 @@
             <dt>
               <button type="button">What materials are the&nbsp;jewellery made of?</button>
             </dt>
-            <dd>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</dd>
+            <dd>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+              semiprecious stones and crystals.</dd>
           </div>
           <div class="faq__item">
             <dt> <button type="button">Which countries do&nbsp;you&nbsp;deliver to?</button></dt>
-            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum porro voluptas fuga rerum, consectetur accusamus temporibus minima iusto distinctio quas!</dd>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum porro voluptas fuga rerum,
+              consectetur accusamus temporibus minima iusto distinctio quas!</dd>
           </div>
           <div class="faq__item">
             <dt><button type="button">What are the payment&nbsp;methods?</button></dt>
@@ -211,12 +292,13 @@
           </div>
           <div class="faq__item">
             <dt><button type="button">Can I return the jewellery&nbsp;if it didn’t fit me?</button></dt>
-            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, totam illum. Rerum sunt facere magnam. Sunt, tempora a ullam facere esse corporis magni. Eligendi corporis nisi quaerat cupiditate.</dd>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, totam illum. Rerum sunt facere magnam.
+              Sunt, tempora a ullam facere esse corporis magni. Eligendi corporis nisi quaerat cupiditate.</dd>
           </div>
         </dl>
       </div>
     </section>
-    <section class="page-main__follow-us">
+    <section class="page-main__follow-us follow-us">
       <div class="follow-us__wrapper">
         <div class="follow-us__header">
           <h2>@Chjewellery</h2>
@@ -312,7 +394,7 @@
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.5 0C9.53775 0 9.792 0.00749996 10.5915 0.045C11.3903 0.0825 11.934 0.20775 12.4125 0.39375C12.9075 0.58425 13.3245 0.84225 13.7415 1.2585C14.1229 1.63342 14.418 2.08694 14.6063 2.5875C14.7915 3.06525 14.9175 3.60975 14.955 4.4085C14.9903 5.208 15 5.46225 15 7.5C15 9.53775 14.9925 9.792 14.955 10.5915C14.9175 11.3903 14.7915 11.934 14.6063 12.4125C14.4185 12.9133 14.1233 13.367 13.7415 13.7415C13.3665 14.1227 12.913 14.4178 12.4125 14.6063C11.9347 14.7915 11.3903 14.9175 10.5915 14.955C9.792 14.9903 9.53775 15 7.5 15C5.46225 15 5.208 14.9925 4.4085 14.955C3.60975 14.9175 3.066 14.7915 2.5875 14.6063C2.08674 14.4184 1.63315 14.1232 1.2585 13.7415C0.877055 13.3666 0.581949 12.9131 0.39375 12.4125C0.20775 11.9347 0.0825 11.3903 0.045 10.5915C0.00974996 9.792 0 9.53775 0 7.5C0 5.46225 0.00749996 5.208 0.045 4.4085C0.0825 3.609 0.20775 3.066 0.39375 2.5875C0.581427 2.08663 0.876603 1.63299 1.2585 1.2585C1.63325 0.876923 2.08682 0.581797 2.5875 0.39375C3.066 0.20775 3.609 0.0825 4.4085 0.045C5.208 0.00974996 5.46225 0 7.5 0ZM7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM12.375 3.5625C12.375 3.31386 12.2762 3.0754 12.1004 2.89959C11.9246 2.72377 11.6861 2.625 11.4375 2.625C11.1889 2.625 10.9504 2.72377 10.7746 2.89959C10.5988 3.0754 10.5 3.31386 10.5 3.5625C10.5 3.81114 10.5988 4.0496 10.7746 4.22541C10.9504 4.40123 11.1889 4.5 11.4375 4.5C11.6861 4.5 11.9246 4.40123 12.1004 4.22541C12.2762 4.0496 12.375 3.81114 12.375 3.5625ZM7.5 5.25C8.09674 5.25 8.66903 5.48705 9.09099 5.90901C9.51295 6.33097 9.75 6.90326 9.75 7.5C9.75 8.09674 9.51295 8.66903 9.09099 9.09099C8.66903 9.51295 8.09674 9.75 7.5 9.75C6.90326 9.75 6.33097 9.51295 5.90901 9.09099C5.48705 8.66903 5.25 8.09674 5.25 7.5C5.25 6.90326 5.48705 6.33097 5.90901 5.90901C6.33097 5.48705 6.90326 5.25 7.5 5.25Z" fill="currentColor"></path>
               </svg>
-                <span>Instagram</span></a>
+              <span>Instagram</span></a>
           </li>
           <li>
             <a href="#">
@@ -332,7 +414,7 @@
       </section>
     </div>
   </footer>
-  <section class="modal login">
+  <section class="login modal">
     <div class="modal__wrapper">
       <div class="login__image-wrapper">
         <picture>
@@ -356,6 +438,8 @@
       </div>
     </div>
   </section>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

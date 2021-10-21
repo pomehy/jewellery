@@ -11,7 +11,7 @@
     <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" crossorigin="">
     <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" crossorigin="">
     <link rel="preload" href="fonts/cormorant-garamond-mediumitalic.woff2" as="font" crossorigin="">
-    <title>Jewellery Store - start page</title>
+    <title>Jewellery Store - Log in</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 <body class="page-body">
@@ -51,10 +51,30 @@
       <nav class="page-header__navigation navigation">
         <ul class="navigation__main">
           <li>
-            <a href="main.html">Main page</a>
+            <a href="catalog.html">What's new</a>
           </li>
           <li>
-            <a href="catalog.html">Catalog</a>
+            <a href="catalog.html">Chokers</a>
+          </li>
+          <li>
+            <a href="catalog.html">Necklaces</a>
+          </li>
+          <li>
+            <a href="catalog.html">Rings</a>
+          </li>
+          <li>
+            <a href="catalog.html">Earrings</a>
+          </li>
+        </ul>
+        <ul class="navigation__second">
+          <li>
+            <a href="#">About CH</a>
+          </li>
+          <li>
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
           </li>
         </ul>
       </nav>
@@ -67,6 +87,28 @@
       </picture>
       <div class="intro__text">
         <h1>Welcome to Jewellery Store</h1>
+      </div>
+    </section>
+    <section class="page-main__login login">
+      <div class="login__image-wrapper">
+        <picture>
+          <img src="img/login-bg-desktop@1x.jpg" alt="Beautiful jewelry" width="430" height="138">
+        </picture>
+      </div>
+      <div class="login__content">
+        <h2>Log In</h2>
+        <div class="login__form">
+          <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <label class="visually-hidden" for="login-user-email">E-mail user</label>
+            <input id="login-user-email" name="user-name" type="email" data-field="user-email" placeholder="Your E-mail" maxlength="30" required="">
+            <label class="visually-hidden" for="login-user-password">Password user</label>
+            <input id="login-user-password" name="user-password" type="password" data-field="user-password" placeholder="Password" minlength="10" required="">
+            <a class="login__forgot-password" href="#">Forgot your password?</a>
+            <button class="button" type="submit">Log in</button>
+            <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
+          </form>
+        </div>
+        <button class="login__close" type="button" aria-label="close popup"></button>
       </div>
     </section>
   </main>
@@ -138,30 +180,6 @@
       </section>
     </div>
   </footer>
-  <section class="modal login">
-    <div class="modal__wrapper">
-      <div class="login__image-wrapper">
-        <picture>
-          <img src="img/login-bg-desktop@1x.jpg" alt="Beautiful jewelry" width="430" height="138">
-        </picture>
-      </div>
-      <div class="login__content">
-        <h2>Log In</h2>
-        <div class="login__form">
-          <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
-            <label class="visually-hidden" for="login-user-email">E-mail user</label>
-            <input id="login-user-email" name="user-name" type="email" data-field="user-email" placeholder="Your E-mail" maxlength="30" required="">
-            <label class="visually-hidden" for="login-user-password">Password user</label>
-            <input id="login-user-password" name="user-password" type="password" data-field="user-password" placeholder="Password" minlength="10" required="">
-            <a class="login__forgot-password" href="#">Forgot your password?</a>
-            <button class="button" type="submit">Log in</button>
-            <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
-          </form>
-        </div>
-        <button class="modal__close login__close" type="button" aria-label="close popup"></button>
-      </div>
-    </div>
-  </section>
   <script src="js/main.js"></script>
 </body>
 </html>
