@@ -1,4 +1,41 @@
 'use strict';
+
+const accordionClickHandler = (items, toggles, classOpen) => {
+  for (let i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+      let array = Array.from(toggles);
+      let target = evt.target;
+      let index = array.indexOf(target);
+
+      array.forEach(function (item, j) {
+        if (j === index) {
+          items[j].classList.toggle(classOpen);
+        }
+      });
+    });
+  }
+};
+
+const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) => {
+  window.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape' || evt.key === 'Esc') {
+      if (modal.classList.contains(modalClassShow)) {
+        modal.classList.remove(modalClassShow);
+      }
+      pageBody.classList.remove('page-body--no-scroll');
+    }
+  });
+
+  modal.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains(modalClassShow) || evt.target.classList.contains(modalWrapper) || evt.target.classList.contains(modalClose)) {
+      modal.classList.remove(modalClassShow);
+      pageBody.classList.remove('page-body--no-scroll');
+    }
+  });
+};
+
+
 (function () {
   const pageHeader = document.querySelector('.page-header');
   const headerToggle = document.querySelector('.page-header__toggle');
@@ -13,11 +50,11 @@
     headerToggle.addEventListener('click', function () {
       if (pageHeader.classList.contains('page-header--opened')) {
         pageHeader.classList.remove('page-header--opened');
-        pageBody.classList.remove('page-body--no-scroll');
+        pageBody.classList.remove('page-body--open-menu');
         pageMain.classList.remove('page-main--no-scroll');
       } else {
         pageHeader.classList.add('page-header--opened');
-        pageBody.classList.add('page-body--no-scroll');
+        pageBody.classList.add('page-body--open-menu');
         pageMain.classList.add('page-main--no-scroll');
       }
     });
@@ -35,34 +72,24 @@
 (function () {
   const faqItems = document.querySelectorAll('.faq__item');
   const faqToggles = document.querySelectorAll('.faq__item button');
+  const classOpenFaq = 'faq__item--opened';
 
   if (faqItems) {
     for (let i = 0; i < faqItems.length; i++) {
       faqItems[i].classList.remove('faq__item--nojs');
+      faqItems[i].classList.remove(classOpenFaq);
     }
   }
 
   if (faqToggles) {
-    for (let i = 0; i < faqToggles.length; i++) {
-      faqToggles[i].addEventListener('click', function (evt) {
-        evt.preventDefault();
-        let array = Array.from(faqToggles);
-        let target = evt.target;
-        let index = array.indexOf(target);
-
-        array.forEach(function (item, j) {
-          if (j === index) {
-            faqItems[j].classList.toggle('faq__item--opened');
-          }
-        });
-      });
-    }
+    accordionClickHandler(faqItems, faqToggles, classOpenFaq);
   }
 })();
 
 (function () {
   const filterItems = document.querySelectorAll('.filter__fieldset');
   const filterToggles = document.querySelectorAll('.filter__fieldset button');
+  const classOpenFilter = 'filter__fieldset--opened';
 
   if (filterItems) {
     for (let i = 0; i < filterItems.length; i++) {
@@ -71,84 +98,46 @@
   }
 
   if (filterToggles) {
-    for (let i = 0; i < filterToggles.length; i++) {
-      filterToggles[i].addEventListener('click', function (evt) {
-        evt.preventDefault();
-        let array = Array.from(filterToggles);
-        let target = evt.target;
-        let index = array.indexOf(target);
-
-        array.forEach(function (item, j) {
-          if (j === index) {
-            filterItems[j].classList.toggle('filter__fieldset--opened');
-          }
-        });
-      });
-    }
+    accordionClickHandler(filterItems, filterToggles, classOpenFilter);
   }
 })();
 
 (function () {
   const pageBody = document.querySelector('.page-body');
   const modals = document.querySelectorAll('.modal');
-  const modalLogin = document.querySelector('.modal.login');
+  const loginModal = document.querySelector('.modal.login');
   const loginButton = document.querySelector('.page-header__login a');
   const loginUserEmail = document.querySelector('#login-user-email');
 
   const filter = document.querySelector('.filter');
   const filterToggle = document.querySelector('.filter__toggle');
+  const filterWrapperClass = 'filter__form-wrapper';
+  const filterCloseClass = 'filter__close';
+  const filterShowClass = 'filter--show';
 
   if (filterToggle) {
     filterToggle.addEventListener('click', (evt) => {
       evt.preventDefault();
-      filter.classList.add('filter--opened');
+      filter.classList.add('filter--show');
       pageBody.classList.add('page-body--no-scroll');
     });
   }
 
   if (filter) {
-    window.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Escape' || evt.key === 'Esc') {
-        if (filter.classList.contains('filter--opened')) {
-          filter.classList.remove('filter--opened');
-        }
-        pageBody.classList.remove('page-body--no-scroll');
-      }
-    });
-
     filter.classList.remove('filter--nojs');
+    closeModal(filter, filterWrapperClass, filterCloseClass, filterShowClass, pageBody);
   }
 
-  if (filter) {
-    filter.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('filter--opened') || evt.target.classList.contains('filter__form-wrapper') || evt.target.classList.contains('filter__close')) {
-        filter.classList.remove('filter--opened');
-        pageBody.classList.remove('page-body--no-scroll');
+  if (loginButton) {
+    loginButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      loginModal.classList.add('modal--show');
+      pageBody.classList.add('page-body--no-scroll');
+
+      if (loginUserEmail) {
+        loginUserEmail.focus();
       }
     });
-  }
-
-  if (modalLogin) {
-    window.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Escape' || evt.key === 'Esc') {
-        if (modalLogin.classList.contains('modal--show')) {
-          modalLogin.classList.remove('modal--show');
-        }
-        pageBody.classList.remove('page-body--no-scroll');
-      }
-    });
-
-    if (loginButton) {
-      loginButton.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        modalLogin.classList.add('modal--show');
-        pageBody.classList.add('page-body--no-scroll');
-
-        if (loginUserEmail) {
-          loginUserEmail.focus();
-        }
-      });
-    }
   }
 
   if (modals) {
@@ -159,6 +148,60 @@
           pageBody.classList.remove('page-body--no-scroll');
         }
       });
+
+      window.addEventListener('keydown', (evt) => {
+        if (evt.key === 'Escape' || evt.key === 'Esc') {
+          if (modals[i].classList.contains('modal--show')) {
+            modals[i].classList.remove('modal--show');
+          }
+          pageBody.classList.remove('page-body--no-scroll');
+        }
+      });
     }
+  }
+})();
+
+(function () {
+  const loginForm = document.querySelector('.login form');
+  const inputForms = document.querySelectorAll('input');
+
+  const isCyrillic = (text) => {
+    return /[а-я]/i.test(text);
+  };
+
+  const customValidation = (input) => {
+    const inputValue = input.value;
+
+    if (input.type === 'email') {
+      if (isCyrillic(inputValue)) {
+        input.setCustomValidity('Please enter Latin characters');
+      } else {
+        input.setCustomValidity('');
+      }
+    }
+    input.reportValidity();
+  };
+
+  const addLocalStorage = function (input) {
+    let isStorageSupport = true;
+
+    if (isStorageSupport) {
+      if (input.type === 'tel' || input.type === 'email') {
+        let storageKey = input.name;
+        localStorage.setItem(storageKey, input.value);
+      }
+    }
+  };
+
+  for (let j = 0; j < inputForms.length; j++) {
+    if (loginForm) {
+      loginForm.addEventListener('submit', function () {
+        addLocalStorage(inputForms[j]);
+      });
+    }
+
+    inputForms[j].addEventListener('input', () => {
+      customValidation(inputForms[j]);
+    });
   }
 })();
