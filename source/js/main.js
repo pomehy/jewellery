@@ -2,6 +2,8 @@
 (function () {
   const pageHeader = document.querySelector('.page-header');
   const headerToggle = document.querySelector('.page-header__toggle');
+  const pageBody = document.querySelector('.page-body');
+  const pageMain = document.querySelector('.page-main');
 
   if (pageHeader) {
     pageHeader.classList.remove('page-header--nojs');
@@ -11,8 +13,12 @@
     headerToggle.addEventListener('click', function () {
       if (pageHeader.classList.contains('page-header--opened')) {
         pageHeader.classList.remove('page-header--opened');
+        pageBody.classList.remove('page-body--no-scroll');
+        pageMain.classList.remove('page-main--no-scroll');
       } else {
         pageHeader.classList.add('page-header--opened');
+        pageBody.classList.add('page-body--no-scroll');
+        pageMain.classList.add('page-main--no-scroll');
       }
     });
   }

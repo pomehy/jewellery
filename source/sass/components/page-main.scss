@@ -2,6 +2,12 @@
   flex-grow: 1;
 }
 
+.page-main--no-scroll {
+  @media (max-width: $tablet-width) {
+    position: fixed;
+  }
+}
+
 .page-main__new-products {
   padding-top: 120px;
   padding-bottom: 114px;

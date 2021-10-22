@@ -20,5 +20,10 @@
 
 .page-body--no-scroll {
   margin-left: -17px;
-  overflow: hidden;
+  overflow-y: hidden;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    overflow-y: auto;
+  }
 }
