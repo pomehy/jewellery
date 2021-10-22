@@ -10,11 +10,11 @@
  * Released on: October 18, 2021
  */
 (function (global, factory) {
-     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-       typeof define === 'function' && define.amd ? define(factory) :
-       (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swiper = factory());
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swiper = factory());
    }(this, (function () {
-         'use strict';
+        'use strict';
 
   /**
    * SSR Window 4.0.0
@@ -10057,6 +10057,10 @@
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   loopFillGroupWithBlank: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
   pagination: {
     el: ".new-products__pagination",
     clickable: true,
