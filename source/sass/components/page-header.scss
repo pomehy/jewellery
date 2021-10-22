@@ -24,7 +24,7 @@
     background-color: $basic-brown;
 
     .page-header__toggle {
-      background-image: url("../../img/decor/mobile-toggle-light.svg");
+      background-image: url("./../img/decor/mobile-toggle-light.svg");
     }
 
     .page-header__search-form {
@@ -119,7 +119,7 @@
   width: 25px;
   height: 18px;
 
-  background-image: url("../../img/decor/mobile-toggle.svg");
+  background-image: url("./../img/decor/mobile-toggle.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;

@@ -1,6 +1,15 @@
-.logo[href] {
+.logo {
   display: flex;
 
+  @media (max-width: $mobile-width) {
+    svg {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
+
+.logo[href] {
   transition: 0.2s ease-in;
 
   color: $basic-brown;
@@ -12,12 +21,5 @@
 
   &:active {
     opacity: 0.4;
-  }
-
-  @media (max-width: $mobile-width) {
-    svg {
-      width: 52px;
-      height: 52px;
-    }
   }
 }
