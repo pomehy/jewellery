@@ -16,6 +16,7 @@
   @media (max-width: $tablet-width) {
     position: absolute;
     z-index: 10;
+    left: 0;
 
     width: 100%;
     min-height: 100vh;
@@ -33,8 +34,9 @@
     .page-header__logo {
       top: -22px;
 
-      svg {
-        fill: $basic-white;
+      a {
+        transition: none;
+        color: $basic-white;
       }
     }
 
@@ -129,7 +131,7 @@
   cursor: pointer;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
 
     width: 45px;
@@ -210,6 +212,10 @@
   margin-right: auto;
   margin-left: auto;
 
+  a {
+    color: $basic-brown;
+  }
+
   svg {
     fill: $basic-brown;
   }
@@ -268,7 +274,7 @@
   width: 100%;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 32px;
 

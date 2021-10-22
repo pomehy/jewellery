@@ -39,7 +39,7 @@
   }
 }
 
-.filter--opened {
+.filter--show {
   @media (max-width: $tablet-width) {
     .filter__form-wrapper {
       display: flex;
@@ -179,7 +179,7 @@
 
     width: 100%;
 
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 23px;
@@ -191,7 +191,7 @@
     cursor: pointer;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 28px;
       right: 24px;
@@ -248,7 +248,7 @@
     cursor: pointer;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
 
       left: 0;

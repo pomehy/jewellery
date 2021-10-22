@@ -3,6 +3,8 @@
 
   transition: 0.2s ease-in;
 
+  color: $basic-brown;
+
   &:hover,
   &:focus {
     transform: scale(1.08);

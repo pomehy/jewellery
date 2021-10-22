@@ -12,7 +12,6 @@
   padding-top: 120px;
   padding-bottom: 114px;
 
-  // display: none;
   @media (max-width: $tablet-width) {
     padding-top: 70px;
     padding-bottom: 64px;
@@ -73,9 +72,6 @@
 
   max-width: 350px;
   width: 100%;
-  @media (max-width: $tablet-width) {
-
-  }
 }
 
 .page-main__login {

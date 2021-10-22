@@ -25,7 +25,7 @@
     display: flex;
     padding: 10px 5px;
 
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -67,6 +67,7 @@
       &:focus {
         color: transparentize($basic-white, 0.4)
       }
+
       &:active {
         color: transparentize($basic-white, 0.7)
       }

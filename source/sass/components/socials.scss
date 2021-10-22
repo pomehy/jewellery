@@ -32,13 +32,13 @@
   }
 
   @media (max-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-
     max-width: 560px;
   }
 
   @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+
     li {
       margin-bottom: 0;
       margin-right: 14px;

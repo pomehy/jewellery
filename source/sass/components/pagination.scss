@@ -104,7 +104,7 @@
   }
 }
 
-.pagination__page--current[href] {
+.pagination__page--current {
   color: $font-color-dark;
 
   pointer-events: none;

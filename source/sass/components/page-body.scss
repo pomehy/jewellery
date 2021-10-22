@@ -9,7 +9,7 @@
 
   min-height: 100vh;
 
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-style: normal;
   font-size: 16px;
 
@@ -24,6 +24,16 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
+  }
+}
+
+.page-body--open-menu {
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
     overflow-y: auto;
   }
+}
+
+.page-body--open-menu.page-body--no-scroll {
+  overflow: hidden;
 }

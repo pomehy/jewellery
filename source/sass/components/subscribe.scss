@@ -36,7 +36,7 @@
     align-items: center;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 1px;
 
@@ -62,7 +62,7 @@
 
     width: 100%;
 
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -94,7 +94,7 @@
     max-width: 108px;
     width: 100%;
 
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     color: $basic-white;
     font-size: 16px;
 
@@ -108,7 +108,7 @@
     box-sizing: border-box;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       right: 0;
 
