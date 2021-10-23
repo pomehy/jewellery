@@ -205,3 +205,54 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
     });
   }
 })();
+
+(function () {
+  var swiper = new Swiper('.mySwiper', {
+    spaceBetween: 30,
+    loopFillGroupWithBlank: true,
+    preloadImages: false,
+    lazy: {
+      loadPrevNext: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    pagination: {
+      el: '.new-products__pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+    navigation: {
+      nextEl: '.new-products__next',
+      prevEl: '.new-products__prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        allowTouchMove: true,
+        pagination: {
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+          ' of ' +
+          '<span class="' + totalClass + '"></span>';
+          }
+        },
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        allowTouchMove: true,
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        allowTouchMove: false,
+      }
+    },
+  });
+})();
