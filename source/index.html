@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Jewellery">
-    <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" crossorigin="">
-    <link rel="preload" href="fonts/cormorant-garamond-mediumitalic.woff2" as="font" crossorigin="">
-    <title>Jewellery Store - start page</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jewellery">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-semibold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-mediumitalic.woff2" as="font" crossorigin="">
+  <title>Jewellery Store - start page</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
 <body class="page-body">
   <header class="page-header page-header--nojs">
     <div class="page-header__wrapper">
@@ -41,7 +43,8 @@
           <li class="cart">
             <a class="cart__link" href="#">
               <p>Cart<span class="cart__counter">&nbsp;0</span></p>
-              <svg class="cart__icon" role="img" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="cart__icon" role="img" width="20" height="18" viewBox="0 0 20 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#cart-icon"></use>
               </svg>
             </a>
@@ -64,12 +67,15 @@
     <section class="page-main__intro intro">
       <picture>
         <!-- 1х: 768x261px; 2x: 1536x522px -->
-        <source type="image/webp" media="(max-width:1023px)" srcset="img/catalog/catalog-bg-tablet@1x.webp 1x, img/catalog/catalog-bg-tablet@2x.webp 2x">
+        <source type="image/webp" media="(max-width:1023px)"
+          srcset="img/catalog/catalog-bg-tablet@1x.webp 1x, img/catalog/catalog-bg-tablet@2x.webp 2x">
         <!-- 1х: 1366x463px; 2x: 2732x522px -->
-        <source type="image/webp" srcset="img/catalog/catalog-bg-desktop@1x.webp 1x, img/catalog/catalog-bg-desktop@2x.webp 2x">
+        <source type="image/webp"
+          srcset="img/catalog/catalog-bg-desktop@1x.webp 1x, img/catalog/catalog-bg-desktop@2x.webp 2x">
         <!-- 1х: 1366x261px; 2x: 2732x522px -->
-        <img src="img/catalog/catalog-bg-desktop@1x.jpg" srcset="img/catalog/catalog-bg-desktop@2x.jpg 2x" alt="Gold Earrings" width="1366" height="261">
-     </picture>
+        <img src="img/catalog/catalog-bg-desktop@1x.jpg" srcset="img/catalog/catalog-bg-desktop@2x.jpg 2x"
+          alt="Gold Earrings" width="1366" height="261">
+      </picture>
       <div class="intro__text">
         <h1>Welcome to Jewellery Store</h1>
       </div>
@@ -154,10 +160,10 @@
           <source type="image/webp" media="(max-width:1023px)"
             srcset="img/login-bg-tablet@1x.webp 1x, img/login-bg-tablet@2x.webp 2x">
           <!-- 1х: 430x138px; 2x: 860x276 -->
-          <source type="image/webp"
-            srcset="img/login-bg-desktop@1x.webp 1x, img/login-bg-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/login-bg-desktop@1x.webp 1x, img/login-bg-desktop@2x.webp 2x">
           <!-- 1х: 430x138px; 2x: 860x276 -->
-          <img src="img/login-bg-desktop@1x.jpg" srcset="img/login-bg-desktop@2x.jpg 2x" alt="Beautiful jewelry" width="430" height="138">
+          <img src="img/login-bg-desktop@1x.jpg" srcset="img/login-bg-desktop@2x.jpg 2x" alt="Beautiful jewelry"
+            width="430" height="138">
         </picture>
       </div>
       <div class="login__content">
@@ -165,9 +171,11 @@
         <div class="login__form">
           <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
             <label class="visually-hidden" for="login-user-email">E-mail user</label>
-            <input id="login-user-email" name="user-email" type="email" data-field="user-email" placeholder="Your E-mail" maxlength="30" required>
+            <input id="login-user-email" name="user-email" type="email" data-field="user-email"
+              placeholder="Your E-mail" maxlength="30" required>
             <label class="visually-hidden" for="login-user-password">Password user</label>
-            <input id="login-user-password" name="user-password" type="password" data-field="user-password" placeholder="Password" minlength="10" required>
+            <input id="login-user-password" name="user-password" type="password" data-field="user-password"
+              placeholder="Password" minlength="10" required>
             <a class="login__forgot-password" href="#">Forgot your password?</a>
             <button class="button" type="submit">Log in</button>
             <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
@@ -179,4 +187,5 @@
   </section>
   <script src="js/main.js"></script>
 </body>
+
 </html>

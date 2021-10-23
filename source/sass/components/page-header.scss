@@ -78,9 +78,7 @@
     .page-header__logo {
       position: static;
 
-      svg {
-        fill: $basic-white;
-      }
+      color: $basic-white;
     }
 
     .page-header__navigation {

@@ -47,6 +47,30 @@
   }
 }
 
+.filter--open {
+  .filter__toggle {
+    display: none;
+  }
+
+  .filter__form-wrapper {
+    position: static;
+    height: auto;
+    display: flex;
+
+    background-color: transparent;
+
+    overflow: auto;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .filter__close {
+    display: none;
+  }
+}
+
 .filter--nojs {
   form {
     width: 100%;

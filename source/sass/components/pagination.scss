@@ -1,11 +1,12 @@
 .pagination {
+  grid-column: 2 / auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   margin-left: auto;
 
-  max-width: 870px;
   width: 100%;
 
   @media (max-width: $mobile-width) {
