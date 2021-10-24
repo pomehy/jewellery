@@ -90,7 +90,7 @@ img {
   overflow-y: hidden; }
   @media (max-width: 1023px) {
     .page-body--no-scroll {
-      margin-right: 0; } }
+      margin-left: 0; } }
 
 @media (max-width: 1023px) {
   .page-body--open-menu {
@@ -158,8 +158,9 @@ img {
       display: -ms-flexbox;
       display: flex; }
     .page-header--nojs .page-header__logo {
-      position: static;
-      color: #ffffff; }
+      position: static; }
+      .page-header--nojs .page-header__logo a {
+        color: #ffffff; }
     .page-header--nojs .page-header__navigation {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -548,7 +549,8 @@ img {
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  color: #a87b62; }
   @media (max-width: 767px) {
     .logo svg {
       width: 52px;
@@ -556,8 +558,7 @@ img {
 
 .logo[href] {
   -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
-  color: #a87b62; }
+  transition: 0.2s ease-in; }
   .logo[href]:hover, .logo[href]:focus {
     -webkit-transform: scale(1.08);
             transform: scale(1.08); }
@@ -1730,7 +1731,8 @@ img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; }
+     object-fit: cover;
+  background-color: rgba(168, 123, 98, 0.5); }
 
 .gallery__item--large {
   grid-column: 2 / 1 span;
