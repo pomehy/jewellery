@@ -78,7 +78,9 @@
     .page-header__logo {
       position: static;
 
-      color: $basic-white;
+      a {
+        color: $basic-white;
+      }
     }
 
     .page-header__navigation {
