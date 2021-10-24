@@ -2,13 +2,13 @@
 
 const accordionClickHandler = (items, toggles, classOpen) => {
   for (let i = 0; i < toggles.length; i++) {
-    toggles[i].addEventListener('click', function (evt) {
+    toggles[i].addEventListener('click', (evt) => {
       evt.preventDefault();
       let array = Array.from(toggles);
       let target = evt.target;
       let index = array.indexOf(target);
 
-      array.forEach(function (item, j) {
+      array.forEach((item, j) => {
         if (j === index) {
           items[j].classList.toggle(classOpen);
         }
@@ -47,7 +47,8 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
   }
 
   if (headerToggle) {
-    headerToggle.addEventListener('click', function () {
+    headerToggle.addEventListener('click', (evt) => {
+      evt.preventDefault();
       if (pageHeader.classList.contains('page-header--opened')) {
         pageHeader.classList.remove('page-header--opened');
         pageBody.classList.remove('page-body--open-menu');
@@ -182,7 +183,7 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
     input.reportValidity();
   };
 
-  const addLocalStorage = function (input) {
+  const addLocalStorage = (input) => {
     let isStorageSupport = true;
 
     if (isStorageSupport) {
@@ -195,7 +196,7 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
 
   for (let j = 0; j < inputForms.length; j++) {
     if (loginForm) {
-      loginForm.addEventListener('submit', function () {
+      loginForm.addEventListener('submit', () => {
         addLocalStorage(inputForms[j]);
       });
     }
@@ -204,55 +205,4 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
       customValidation(inputForms[j]);
     });
   }
-})();
-
-(function () {
-  var swiper = new Swiper('.mySwiper', {
-    spaceBetween: 30,
-    loopFillGroupWithBlank: true,
-    preloadImages: false,
-    lazy: {
-      loadPrevNext: true,
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-    pagination: {
-      el: '.new-products__pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
-    },
-    navigation: {
-      nextEl: '.new-products__next',
-      prevEl: '.new-products__prev',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        allowTouchMove: true,
-        pagination: {
-          type: 'fraction',
-          renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' +
-          ' of ' +
-          '<span class="' + totalClass + '"></span>';
-          }
-        },
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        allowTouchMove: true,
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        allowTouchMove: false,
-      }
-    },
-  });
 })();
