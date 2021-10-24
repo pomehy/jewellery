@@ -206,3 +206,35 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
     });
   }
 })();
+
+(function () {
+  const followUs = document.querySelector('.follow-us');
+
+  const getSrcImage = (imageWrapper) => {
+    const imageElements = imageWrapper.querySelectorAll('img');
+    const webpImagesElements = imageWrapper.querySelectorAll('source');
+
+    for (let k = 0; k < imageElements.length; k++) {
+      imageElements[k].src = imageElements[k].dataset.src;
+      imageElements[k].srcset = imageElements[k].dataset.srcset;
+    }
+    for (let k = 0; k < webpImagesElements.length; k++) {
+      webpImagesElements[k].srcset = webpImagesElements[k].dataset.srcset;
+    }
+  };
+
+  const uploadImages = (container) => {
+    window.addEventListener('scroll', () => {
+      const prevSection = container.previousElementSibling;
+      const coordPrevSection = prevSection.getBoundingClientRect();
+
+      if (coordPrevSection.top < 1200) {
+        getSrcImage(container);
+      }
+    });
+  };
+
+  if (followUs) {
+    uploadImages(followUs);
+  }
+})();
