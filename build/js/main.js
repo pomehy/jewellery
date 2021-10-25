@@ -224,14 +224,21 @@ const closeModal = (modal, modalWrapper, modalClose, modalClassShow, pageBody) =
   };
 
   const uploadImages = (container) => {
-    window.addEventListener('scroll', () => {
-      const prevSection = container.previousElementSibling;
-      const coordPrevSection = prevSection.getBoundingClientRect();
+    const prevSection = container.previousElementSibling;
 
-      if (coordPrevSection.top < 1200) {
+    if (prevSection) {
+      window.addEventListener('scroll', () => {
+        const coordPrevSection = prevSection.getBoundingClientRect();
+
+        if (coordPrevSection.top < 1200) {
+          getSrcImage(container);
+        }
+      });
+    } else {
+      document.addEventListener('DOMContentLoaded', () => {
         getSrcImage(container);
-      }
-    });
+      });
+    }
   };
 
   if (followUs) {
