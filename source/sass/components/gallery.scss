@@ -1,6 +1,7 @@
 .gallery__list {
   display: grid;
   grid-template-columns: 19.7% 34.1% 19.7% 19.7%;
+  grid-template-rows: auto 150px;
   column-gap: 2.3%;
   row-gap: 34px;
 
