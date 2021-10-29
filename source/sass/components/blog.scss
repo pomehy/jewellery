@@ -1,5 +1,9 @@
 .blog__wrapper {
   @include container;
+
+  @media (max-width: $tablet-width) {
+    max-width: 768px;
+  }
 }
 
 .blog__header {
