@@ -77,9 +77,7 @@
     const pageBody = document.querySelector('.page-body');
     const modals = document.querySelectorAll('.modal');
     const loginModal = document.querySelector('.modal.login');
-    const loginForm = loginModal.querySelector('form');
-    const loginInputs = loginForm.querySelectorAll('input');
-    const loginContent = loginModal.querySelector('.login__content');
+    const loginForm = document.querySelector('.login form');
     const loginButton = document.querySelector('.page-header__login a');
     const loginUserEmail = loginForm.querySelector('#login-user-email');
     const modalCloseButton = document.querySelector('.modal__close');
@@ -90,28 +88,19 @@
     const filterCloseClass = 'filter__close';
     const filterShowClass = 'filter--show';
 
-    const lastElem = loginContent.lastElementChild;
-    const firstElem = loginInputs[0];
-    console.log(lastElem);
+    if (modalCloseButton) {
+      modalCloseButton.addEventListener('keydown', (evt) => {
+        if (evt.key === 'Tab' && !evt.shiftKey) {
+          loginForm.focus();
+        }
+      });
 
-    // modalCloseButton.addEventListener('keydown', (evt) => {
-    //   if (evt.key === 'Tab' && !evt.shiftKey) {
-    //     loginInputs[0].focus();
-    //   }
-    // });
-
-    lastElem.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Tab') {
-        firstElem.focus();
-      }
-    });
-
-    firstElem.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Tab' && evt.shiftKey) {
-        lastElem.focus();
-        console.log(modalCloseButton);
-      }
-    });
+      loginUserEmail.addEventListener('keydown', (evt) => {
+        if (evt.key === 'Tab' && evt.shiftKey) {
+          modalCloseButton.focus();
+        }
+      });
+    }
 
     if (filterToggle) {
       filterToggle.addEventListener('click', (evt) => {
