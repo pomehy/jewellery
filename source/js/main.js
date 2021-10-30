@@ -77,14 +77,41 @@
     const pageBody = document.querySelector('.page-body');
     const modals = document.querySelectorAll('.modal');
     const loginModal = document.querySelector('.modal.login');
+    const loginForm = loginModal.querySelector('form');
+    const loginInputs = loginForm.querySelectorAll('input');
+    const loginContent = loginModal.querySelector('.login__content');
     const loginButton = document.querySelector('.page-header__login a');
-    const loginUserEmail = document.querySelector('#login-user-email');
+    const loginUserEmail = loginForm.querySelector('#login-user-email');
+    const modalCloseButton = document.querySelector('.modal__close');
 
     const filter = document.querySelector('.filter');
     const filterToggle = document.querySelector('.filter__toggle');
     const filterWrapperClass = 'filter__form-wrapper';
     const filterCloseClass = 'filter__close';
     const filterShowClass = 'filter--show';
+
+    const lastElem = loginContent.lastElementChild;
+    const firstElem = loginInputs[0];
+    console.log(lastElem);
+
+    // modalCloseButton.addEventListener('keydown', (evt) => {
+    //   if (evt.key === 'Tab' && !evt.shiftKey) {
+    //     loginInputs[0].focus();
+    //   }
+    // });
+
+    lastElem.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Tab') {
+        firstElem.focus();
+      }
+    });
+
+    firstElem.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Tab' && evt.shiftKey) {
+        lastElem.focus();
+        console.log(modalCloseButton);
+      }
+    });
 
     if (filterToggle) {
       filterToggle.addEventListener('click', (evt) => {
@@ -138,6 +165,7 @@
   const headerToggle = document.querySelector('.page-header__toggle');
   const pageBody = document.querySelector('.page-body');
   const pageMain = document.querySelector('.page-main');
+  const pageFooter = document.querySelector('.page-footer');
 
   if (pageHeader) {
     pageHeader.classList.remove('page-header--nojs');
@@ -150,10 +178,12 @@
         pageHeader.classList.remove('page-header--opened');
         pageBody.classList.remove('page-body--open-menu');
         pageMain.classList.remove('page-main--no-scroll');
+        pageFooter.classList.remove('page-footer--menu-opened');
       } else {
         pageHeader.classList.add('page-header--opened');
         pageBody.classList.add('page-body--open-menu');
         pageMain.classList.add('page-main--no-scroll');
+        pageFooter.classList.add('page-footer--menu-opened');
       }
     });
   }
