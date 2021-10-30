@@ -63,7 +63,6 @@
       }
     });
 
-
     modal.addEventListener('click', (evt) => {
       if (evt.target.classList.contains(modalClassShow) || evt.target.classList.contains(modalWrapper) || evt.target.classList.contains(modalClose)) {
         modal.classList.remove(modalClassShow);
@@ -72,14 +71,12 @@
     });
   };
 
-
   (function () {
     const pageBody = document.querySelector('.page-body');
     const modals = document.querySelectorAll('.modal');
     const loginModal = document.querySelector('.modal.login');
-    const loginForm = document.querySelector('.login form');
     const loginButton = document.querySelector('.page-header__login a');
-    const loginUserEmail = loginForm.querySelector('#login-user-email');
+    const loginUserEmail = document.querySelector('#login-user-email');
     const modalCloseButton = document.querySelector('.modal__close');
 
     const filter = document.querySelector('.filter');
@@ -89,17 +86,19 @@
     const filterShowClass = 'filter--show';
 
     if (modalCloseButton) {
-      modalCloseButton.addEventListener('keydown', (evt) => {
+      modalCloseButton.onkeydown = (evt) => {
         if (evt.key === 'Tab' && !evt.shiftKey) {
-          loginForm.focus();
+          loginUserEmail.focus();
+          return false;
         }
-      });
+      };
 
-      loginUserEmail.addEventListener('keydown', (evt) => {
+      loginUserEmail.onkeydown = (evt) => {
         if (evt.key === 'Tab' && evt.shiftKey) {
           modalCloseButton.focus();
+          return false;
         }
-      });
+      };
     }
 
     if (filterToggle) {
