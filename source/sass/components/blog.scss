@@ -28,7 +28,8 @@
 .blog__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  column-gap: 2.8%;
+  row-gap: 4.9%;
 
   margin: 0;
   padding: 0;
@@ -57,7 +58,8 @@
 
   @media (max-width: $mobile-width) {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
     &:nth-child(2n) {
