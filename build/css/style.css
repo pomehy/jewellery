@@ -2667,7 +2667,13 @@ img {
     font-size: 14px;
     line-height: 18px;
     background-color: transparent;
-    border: none; }
+    border: none;
+    -webkit-appearance: none; }
+  .range__bar input[type="number"] {
+    -moz-appearance: textfield; }
+  .range__bar input::-webkit-outer-spin-button,
+  .range__bar input::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
   @media (max-width: 1023px) {
     .range__bar {
       left: 26px;
