@@ -37,27 +37,6 @@
     text-align: center;
   }
 
-  .login__forgot-password {
-    margin-top: 5px;
-    margin-left: auto;
-
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-
-    color: $font-color-grey;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: $font-color-dark;
-    }
-
-    &:active {
-      opacity: 0.4;
-    }
-  }
-
   p {
     font-weight: 500;
     font-size: 14px;
@@ -107,56 +86,11 @@
     justify-content: center;
   }
 
-  input {
-    margin-bottom: 25px;
-    padding-top: 11px;
-    padding-bottom: 9px;
-
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-
-    background-color: transparent;
-    border: none;
-    box-shadow: inset 1px -2px 0 -1px $font-color-dark;
-
-    &::placeholder {
-      color: $font-color-grey;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
-    &:hover,
-    &:focus {
-      color: $font-color-dark;
-
-      outline: none;
-      box-shadow: inset 1px -4px 0 -1px $basic-brown;
-
-      &::placeholder {
-        color: $font-color-dark;
-      }
-    }
-  }
-
   button[type=submit] {
     margin-top: 45px;
   }
 
-  @media (max-width: $tablet-width) {
-    input {
-      margin-bottom: 24px;
-    }
-  }
-
   @media (max-width: $mobile-width) {
-    input {
-      margin-bottom: 19px;
-    }
-
     button[type=submit] {
       margin-top: 35px;
     }

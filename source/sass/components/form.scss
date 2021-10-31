@@ -1,0 +1,73 @@
+.form__field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 22px;
+  text-align: end;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  input {
+    display: block;
+
+    padding-top: 11px;
+    padding-bottom: 9px;
+
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid $font-color-dark;
+    border-left: none;
+    border-radius: 0;
+
+    &::placeholder {
+      color: $font-color-grey;
+    }
+
+    &:hover,
+    &:focus {
+      color: $font-color-dark;
+
+      outline: none;
+      border-bottom: 1px solid $basic-brown;
+      box-shadow: inset 1px -2px 0 -1px $basic-brown;
+
+      &::placeholder {
+        color: $font-color-dark;
+      }
+    }
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: $font-color-grey;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $font-color-dark;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 19px;
+  }
+}

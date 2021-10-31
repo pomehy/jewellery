@@ -685,15 +685,19 @@
       </div>
       <div class="login__content">
         <h2>Log In</h2>
-        <div class="login__form">
+        <div class="login__form form">
           <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
-            <label class="visually-hidden" for="login-user-email">E-mail user</label>
-            <input id="login-user-email" name="user-email" type="email" data-field="user-email"
-              placeholder="Your E-mail" maxlength="30" required>
-            <label class="visually-hidden" for="login-user-password">Password user</label>
-            <input id="login-user-password" name="user-password" type="password" data-field="user-password"
-              placeholder="Password" minlength="10" required>
-            <a class="login__forgot-password" href="#">Forgot your password?</a>
+            <div class="form__field">
+              <label class="visually-hidden" for="login-user-email">E-mail user</label>
+              <input id="login-user-email" name="user-email" type="email" data-field="user-email"
+                placeholder="Your E-mail" maxlength="30" required>
+            </div>
+            <div class="form__field">
+              <label class="visually-hidden" for="login-user-password">Password user</label>
+              <input id="login-user-password" name="user-password" type="password" data-field="user-password"
+                placeholder="Password" minlength="10" required>
+              <a href="#">Forgot your password?</a>
+            </div>
             <button class="button" type="submit">Log in</button>
             <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
           </form>
