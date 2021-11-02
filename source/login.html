@@ -36,12 +36,12 @@
           </svg>
         </a>
       </div>
-      <div class="page-header__login page-header__user-item">
-        <a>Login</a>
-      </div>
-      <div class="page-header__cart page-header__user-item user-menu">
+      <div class="page-header__user-menu user-menu">
         <ul class="user-menu__list">
-          <li class="cart">
+          <li class="user-menu__login login">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="user-menu__cart cart">
             <a class="cart__link" href="#">
               <p>Cart<span class="cart__counter">&nbsp;0</span></p>
               <svg class="cart__icon" role="img" width="20" height="18" viewBox="0 0 20 18" fill="none"
@@ -79,6 +79,9 @@
           </li>
           <li>
             <a href="#">Contact Us</a>
+          </li>
+          <li class="navigation__login login">
+            <a href="login.html">Login</a>
           </li>
         </ul>
       </nav>
@@ -119,20 +122,23 @@
       </div>
       <div class="login__content">
         <h2>Log In</h2>
-        <div class="login__form">
+        <div class="login__form form">
           <form action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data" autocomplete="off">
-            <label class="visually-hidden" for="login-user-email">E-mail user</label>
-            <input id="login-user-email" name="user-email" type="email" data-field="user-email"
-              placeholder="Your E-mail" maxlength="30" required>
-            <label class="visually-hidden" for="login-user-password">Password user</label>
-            <input id="login-user-password" name="user-password" type="password" data-field="user-password"
-              placeholder="Password" minlength="10" required>
-            <a class="login__forgot-password" href="#">Forgot your password?</a>
+            <div class="form__field">
+              <label class="visually-hidden" for="login-user-email">E-mail user</label>
+              <input id="login-user-email" name="user-email" type="email" data-field="user-email"
+                placeholder="Your E-mail" maxlength="30" required>
+            </div>
+            <div class="form__field">
+              <label class="visually-hidden" for="login-user-password">Password user</label>
+              <input id="login-user-password" name="user-password" type="password" data-field="user-password"
+                placeholder="Password" minlength="10" required>
+              <a href="#">Forgot your password?</a>
+            </div>
             <button class="button" type="submit">Log in</button>
             <p>Don’t have an account?&ensp;<a href="#">Sign up</a></p>
           </form>
         </div>
-        <button class="login__close" type="button" aria-label="close popup"></button>
       </div>
     </section>
   </main>
