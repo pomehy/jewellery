@@ -1,6 +1,7 @@
 .user-menu__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   margin: 0;
   padding: 0;
@@ -15,5 +16,11 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.user-menu__login {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
