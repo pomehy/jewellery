@@ -75,7 +75,7 @@
     const pageBody = document.querySelector('.page-body');
     const modals = document.querySelectorAll('.modal');
     const loginModal = document.querySelector('.modal.login');
-    const loginButton = document.querySelector('.page-header__login a');
+    const loginButtons = document.querySelectorAll('.login a');
     const loginUserEmail = document.querySelector('#login-user-email');
     const modalCloseButton = document.querySelector('.modal__close');
 
@@ -114,16 +114,18 @@
       closeModal(filter, filterWrapperClass, filterCloseClass, filterShowClass, pageBody);
     }
 
-    if (loginButton) {
-      loginButton.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        loginModal.classList.add('modal--show');
-        pageBody.classList.add('page-body--no-scroll');
+    if (loginButtons) {
+      for (let i = 0; i < loginButtons.length; i++) {
+        loginButtons[i].addEventListener('click', (evt) => {
+          evt.preventDefault();
+          loginModal.classList.add('modal--show');
+          pageBody.classList.add('page-body--no-scroll');
 
-        if (loginUserEmail) {
-          loginUserEmail.focus();
-        }
-      });
+          if (loginUserEmail) {
+            loginUserEmail.focus();
+          }
+        });
+      }
     }
 
     if (modals) {

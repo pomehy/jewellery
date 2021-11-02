@@ -30,18 +30,19 @@
         </form>
       </div>
       <div class="page-header__logo">
-        <a class="logo" href="main.html" aria-label="Jewellery logo">
+        <a href="main.html" class="logo" aria-label="Logo Jewellery">
           <svg role="img" width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
+          <span class="visually-hidden">Logo Jewellery Store</span>
         </a>
       </div>
-      <div class="page-header__login page-header__user-item">
-        <a href="login.html">Login</a>
-      </div>
-      <div class="page-header__cart page-header__user-item user-menu">
+      <div class="page-header__user-menu user-menu">
         <ul class="user-menu__list">
-          <li class="cart">
+          <li class="user-menu__login login">
+            <a href="login.html">Login</a>
+          </li>
+          <li class="user-menu__cart cart">
             <a class="cart__link" href="#">
               <p>Cart<span class="cart__counter">&nbsp;0</span></p>
               <svg class="cart__icon" role="img" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,19 +55,19 @@
       <nav class="page-header__navigation navigation">
         <ul class="navigation__main">
           <li>
-            <a href="#">What's new</a>
+            <a href="catalog.html">What's new</a>
           </li>
           <li>
-            <a href="#">Chokers</a>
+            <a href="catalog.html">Chokers</a>
           </li>
           <li>
-            <a href="#">Necklaces</a>
+            <a href="catalog.html">Necklaces</a>
           </li>
           <li>
-            <a href="#">Rings</a>
+            <a href="catalog.html">Rings</a>
           </li>
           <li>
-            <a href="#">Earrings</a>
+            <a href="catalog.html">Earrings</a>
           </li>
         </ul>
         <ul class="navigation__second">
@@ -78,6 +79,9 @@
           </li>
           <li>
             <a href="#">Contact Us</a>
+          </li>
+          <li class="navigation__login login">
+            <a href="login.html">Login</a>
           </li>
         </ul>
       </nav>
